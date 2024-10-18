@@ -1,22 +1,18 @@
 {% extends 'base.html' %}
 {% block conteudo %}
 
-<main>
-  <br><br><br>
-  <h1><strong>BOOKBIRD</strong></h1>
+  <main>
+    <h1><strong>EXCLUIR DADOS</strong></h1>
+    <div class="divisoria"></div>
 
-  <div class="divisoria"></div>
+    <form action="/excluir" method="POST">
+      <label>Chave de cadastro:</label>
+      <input type="text" id="codigo" name="codigo">
 
-  <p class="intro">
-    Site responsável pela administração da livraria BookBird.
-  </p>
+      <button>Excluir</button>
+    </form>
 
-  <img src="{{url_for('static',filename='')}}">
-
-
-
-
-</main>
+    </main>
 
 <footer class="bg-body-dark text-center">
     <!-- Grid container -->
@@ -30,7 +26,5 @@
     </div>
     <!-- Copyright -->
   </footer>
-
-
 
 {% endblock %}

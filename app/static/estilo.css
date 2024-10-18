@@ -1,0 +1,62 @@
+h1{
+    text-align: center;
+    margin-top: 25px;
+}
+
+nav{
+    background-color: #4470a9;
+    width: 170px:
+}
+
+input{
+    margin-top: 50px;
+    width: 400px;
+    background-color: #e5f0ff;
+    border-radius: 10px;
+    border: #e8e8e8;
+}
+
+button{
+    margin-top: 10px;
+    background-color: #4470a9;
+    color: white;
+    width: 150px;
+    height: 20px:
+    border-radius: 20px;
+    border: white;
+}
+
+main{
+    text-align: center;
+}
+
+.divisoria{
+    height:5px;
+    background-color: #4470a9;
+    width: 800px;
+    text-align: center;
+    margin-left: 400px;
+}
+
+.card{
+    padding: 20px;
+    margin-top: 60px;
+    margin-right: 180px;
+    float: right;
+}
+
+.intro{
+    margin-top: 20px;
+    margin-bottom- 20px;
+}
+
+figure{
+    width: 1000px;
+    height: 200px;
+    margin-left: 300px
+}
+
+footer{
+    background-color: #4470a9;
+    margin-top: 1400px;
+}

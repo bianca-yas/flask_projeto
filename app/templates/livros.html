@@ -1,0 +1,78 @@
+{% extends 'base.html' %}
+{% block conteudo %}
+
+<main>
+  <h1><strong>LIVROS DISPONÍVEIS</strong></h1>
+  <div class="divisoria"></div>
+
+  <figure><img src="{{url_for('static',filename='lll.png')}}"></figure>
+
+    <div class="card" style="width: 18rem;">
+    <img src="{{url_for('static',filename='fedya.jpg')}}" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">Fyodor Dostoiévski</h5>
+      <p class="card-text">Livros de Dostoiévski.</p>
+      <a href="#" class="btn btn-dark">Ver estoque</a>
+    </div>
+  </div>
+
+    <div class="card" style="width: 18rem;">
+    <img src="{{url_for('static',filename='poe.jpg')}}" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">Edgar Allan Poe</h5>
+      <p class="card-text">Livros de Edgar Allan Poe.</p>
+      <a href="#" class="btn btn-dark">Ver estoque</a>
+    </div>
+  </div>
+
+    <div class="card" style="width: 18rem;">
+    <img src="{{url_for('static',filename='ito.jpg')}}" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">Junji Ito</h5>
+      <p class="card-text">Histórias de Junji Ito.</p>
+      <a href="#" class="btn btn-dark">Ver estoque</a>
+    </div>
+  </div>
+
+  <div class="card" style="width: 18rem;">
+    <img src="{{url_for('static',filename='dazai.jpg')}}" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">Dazai Osamu</h5>
+      <p class="card-text">Livros de Dazai Osamu.</p>
+      <a href="#" class="btn btn-dark">Ver estoque</a>
+    </div>
+  </div>
+  <div class="card" style="width: 18rem;">
+    <img src="{{url_for('static',filename='george.jpg')}}" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">George R.R Martin</h5>
+      <p class="card-text">Livros de George R.R Martin.</p>
+      <a href="#" class="btn btn-dark">Ver estoque</a>
+    </div>
+  </div>
+
+  <div class="card" style="width: 18rem;">
+    <img src="{{url_for('static',filename='king.jpg')}}" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">Stephen King</h5>
+      <p class="card-text">Livros de Stephen King.</p>
+      <a href="#" class="btn btn-dark">Ver estoque</a>
+    </div>
+  </div>
+</main>
+
+<footer class="bg-body-dark text-center">
+    <!-- Grid container -->
+    <div class="container p-4"></div>
+    <!-- Grid container -->
+
+    <!-- Copyright -->
+    <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.05);">
+      © 2020 Copyright:
+      <a class="text-body" href="#">Livraria BookBird</a>
+    </div>
+    <!-- Copyright -->
+  </footer>
+
+
+{% endblock %}

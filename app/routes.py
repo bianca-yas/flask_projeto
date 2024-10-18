@@ -34,6 +34,11 @@ def cadastrarUsuario():
 
 @app.route('/listar')
 def listarTudo():
+    return render_template('listar.html', titulo="Lista de Cadastros")
+
+
+@app.route('/listarTodos')
+def listar():
     try:
         requisicao = requests.get(f'{link}/cadastro/.json') #solicita o dado
         dicionario = requisicao.json()
@@ -41,34 +46,71 @@ def listarTudo():
     except Exception as e:
         return f'Algo deu errado \n {e}'
 
-@app.route('/listarIndividual')
+@app.route('/listaIndi')
+def individual():
+    return render_template('/listarIndividual.html', titulo="Lista individual")
+@app.route('/listarIndividual', methods=['POST'])
 def listarIndividual():
     try:
+        nome = request.form.get("nome")
         requisicao = requests.get(f'{link}/cadastro/.json')
         dicionario = requisicao.json()
         idCadastro = ""
         for codigo in dicionario:
-            chave = dicionario[codigo]['cpf']
-            if chave == 'gcd':
+            chave = dicionario[codigo]['nome']
+            if chave == nome:
                 idCadastro = codigo
                 return idCadastro
     except Exception as e:
         return f'Algo deu errado \n {e}'
 
+@app.route('/listarDados', methods=['POST'])
+def listarDados():
+    try:
+        codigo = request.form.get("codigo")
+        requisicao = requests.get(f'{link}/cadastro/.json')
+        dicionario = requisicao.json()
 
+        for codigo in dicionario:
+            nome = dicionario[codigo]['nome']
+            telefone = dicionario[codigo]['telefone']
+            endereco = dicionario[codigo]['endereco']
+            cpf = dicionario[codigo]['cpf']
+        return f'Nome: {nome}\n' \
+               f'Cpf: {cpf}\n' \
+               f'Endereço: {endereco}\n' \
+               f'Telefone: {telefone}\n'
+    except Exception as e:
+        return f'Algo deu errado \n {e}'
+
+
+@app.route('/att')
+def att():
+    return render_template('/atualizar.html', titulo="Atualizar Dados")
 @app.route('/atualizar')
 def atualizar():
     try:
-        dados = {"nome":"joão"}
+        dados = {"nome":"joao"}
         requisicao = requests.patch(f'{link}/cadastro/-O8mjHX1TqdOpqvem5z7/.json', data=json.dumps(dados))
         return "Atualizado com sucesso!"
     except Exception as e:
         return f'Algo deu errado \n {e}'
 
+@app.route('/excluirPage')
+def excluirPage():
+    return render_template('/excluir.html', titulo="Excluir dados")
+
 @app.route('/excluir')
 def excluir():
     try:
-        requisicao = requests.delete(f'{link}/cadastro/-O8mjHX1TqdOpqvem5z7/.json')
-        return "Excluido com sucesso!"
+        codigo = request.form.get("codigo")
+        requisicao = requests.delete(f'{link}/cadastro/.json')
+        d = requisicao.json()
+        if codigo == d:
+            return "Excluido com sucesso!"
     except Exception as e:
         return f'Algo deu errado \n {e}'
+
+@app.route('/livros')
+def livros():
+    return render_template('/livros.html', titulo="Livros")

@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+{% block conteudo %}
+<main>
+  <form action="/listarTodos">
+    <h1><strong>CADASTROS</strong></h1>
+      <div class="cartao">
+          <div class="card">
+          <h5 class="card-header">Funcionários</h5>
+          <div class="card-body">
+            <h5 class="card-title">Lista de cadastros</h5>
+            <p class="card-text">Consulte todas as pessoas cadastradas na livraria BookBird.</p>
+            <a href="/listarTodos" class="btn btn-dark">Consultar</a>
+          </div>
+           </div>
+      </div>
+  </form>
+
+
+  <div class="divisoria"></div>
+
+</main>
+
+<footer class="bg-body-dark text-center">
+    <!-- Grid container -->
+    <div class="container p-4"></div>
+    <!-- Grid container -->
+
+    <!-- Copyright -->
+    <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.05);">
+      © 2020 Copyright:
+      <a class="text-body" href="#">Livraria BookBird</a>
+    </div>
+    <!-- Copyright -->
+  </footer>
+{% endblock %}

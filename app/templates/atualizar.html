@@ -1,30 +1,28 @@
 {% extends 'base.html' %}
 {% block conteudo %}
 
-  <h1><strong>CADASTRAR</strong></h1>
-  <div class="divisoria"></div>
 <main>
+  <h1><strong>ATUALIZAR DADOS</strong></h1>
+  <div class="divisoria"></div>
 
-  <form action="/cadastrarUsuario" method="POST">
+  <form action="/atualizar" method="POST">
+    <label>Chave de cadastro:</label>
+    <input type="text" name="codigo" id="codigo"><br><br>
 
     <label>CPF: </label>
-    <input type="text" name="cpf" id="cpf"><br><br>
-
+    <input type="text" name="cpf" id="cpf"/><br><br>
 
     <label>Nome: </label>
-    <input type="text" name="nome" id="nome"><br><br>
-
+    <input type="text" name="nome" id="nome"/><br><br>
 
     <label>Telefone: </label>
-    <input type="text" name="telefone" id="telefone"><br><br>
-
+    <input type="text" name="telefone" id="telefone"/><br><br>
 
     <label>Endereço: </label>
-    <input type="text" name="endereco" id="endereco"><br><br>
+    <input type="text" name="endereco" id="endereco"/><br><br>
 
-    <button>Cadastrar</button>
+    <button>Atualizar</button>
   </form>
-
 </main>
 
 <footer class="bg-body-dark text-center">
