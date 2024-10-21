@@ -1,24 +1,40 @@
 {% extends 'base.html' %}
 {% block conteudo %}
-<main>
-  <form action="/listarTodos">
-    <h1><strong>CADASTROS</strong></h1>
-      <div class="cartao">
-          <div class="card">
-          <h5 class="card-header">Funcionários</h5>
-          <div class="card-body">
-            <h5 class="card-title">Lista de cadastros</h5>
-            <p class="card-text">Consulte todas as pessoas cadastradas na livraria BookBird.</p>
-            <a href="/listarTodos" class="btn btn-dark">Consultar</a>
-          </div>
-           </div>
-      </div>
-  </form>
+    <main>
+      <form action="/listarTodos">
+        <h1><strong>CADASTROS</strong></h1>
+          <div class="divisoria"></div>
 
 
-  <div class="divisoria"></div>
+          <div class="card" style="width: 18rem;">
+              <img src="{{url_for('static',filename='pessoas.png')}}" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">Cadastros</h5>
+                <p class="card-text">Lista de pessoas cadastradas na livraria.</p>
+                <a href="/listarTodos" class="btn btn-primary">Consultar</a>
+              </div>
+        </div>
 
-</main>
+          <div class="card" style="width: 18rem;">
+              <img src="{{url_for('static',filename='livrosss.png')}}" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">Livros cadastrados</h5>
+                <p class="card-text">Lista de livros cadastrados na livraria.</p>
+                <a href="/listarTodos" class="btn btn-primary">Consultar</a>
+              </div>
+        </div>
+
+          <div class="card" style="width: 18rem;">
+              <img src="{{url_for('static',filename='func.png')}}" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">Funcionários cadastros</h5>
+                <p class="card-text">Lista de funcionários cadastrados na livraria.</p>
+                <a href="/listarTodos" class="btn btn-primary">Consultar</a>
+              </div>
+        </div>
+      </form>
+
+    </main>
 
 <footer class="bg-body-dark text-center">
     <!-- Grid container -->

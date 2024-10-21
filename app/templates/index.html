@@ -4,6 +4,7 @@
 <main>
   <br><br><br>
   <h1><strong>BOOKBIRD</strong></h1>
+    <img src="{{url_for('static',filename='29302 (1).png')}}">
 
   <div class="divisoria"></div>
 
@@ -11,9 +12,33 @@
     Site responsável pela administração da livraria BookBird.
   </p>
 
-  <img src="{{url_for('static',filename='')}}">
 
+    <div class="card" style="width: 18rem;">
+      <img src="{{url_for('static',filename='user.png')}}" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Cadastrar</h5>
+        <p class="card-text">Cadastre-se e receba nossas notificações!!</p>
+        <a href="/cadastro" class="btn btn-primary">Cadastre-se</a>
+      </div>
+    </div>
 
+    <div class="card" style="width: 18rem;">
+      <img src="{{url_for('static',filename='icon-megaphone.png')}}" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Avisos</h5>
+        <p class="card-text">Mural de avisos da livraria!!</p>
+        <a href="#" class="btn btn-primary">Ver Mais</a>
+      </div>
+    </div>
+
+    <div class="card" style="width: 18rem;">
+      <img src="{{url_for('static',filename='book.png')}}" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Livros</h5>
+        <p class="card-text">Livros disponíveis na livraria!!</p>
+        <a href="/livros" class="btn btn-primary">Ver Mais</a>
+      </div>
+    </div>
 
 
 </main>
